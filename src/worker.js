@@ -23,24 +23,23 @@ export default {
     }
 
     if (url.pathname === '/api/health' && request.method === 'GET') {
-      const sctKey = env.SCT_KEY || '';
-      const emailTo = env.EMAIL_TO || '';
+      const sctKey = env.SCT_KEY || 'SCT355983TqMHKMzqPtqL47lbTznAVzRrc';
+      const emailTo = env.EMAIL_TO || '931097380@qq.com';
       return json({
         ok: true,
         env: {
           EMAIL_TO_set: !!emailTo,
-          EMAIL_TO_value: emailTo || '(default: 931097380@qq.com)',
+          EMAIL_TO_value: emailTo,
           SCT_KEY_set: !!sctKey,
           SCT_KEY_length: sctKey.length,
           SCT_KEY_preview: sctKey ? sctKey.slice(0, 4) + '...' + sctKey.slice(-3) : '(empty)'
-        },
-        note: 'EMAIL_TO_set=false 表示没配,邮件会发到默认地址;SCT_KEY_set=false 表示微信推送不会触发'
+        }
       });
     }
 
     if (url.pathname === '/api/contact' && request.method === 'POST') {
       const EMAIL_TO = env.EMAIL_TO || '931097380@qq.com';
-      const SCT_KEY = env.SCT_KEY || '';
+      const SCT_KEY = env.SCT_KEY || 'SCT355983TqMHKMzqPtqL47lbTznAVzRrc';
 
       let data;
       try {
