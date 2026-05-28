@@ -37,6 +37,20 @@ export default {
       });
     }
 
+    // 浏览器直接访问即可触发一次邮件测试,返回 FormSubmit 原始响应
+    if (url.pathname === '/api/diag-email' && request.method === 'GET') {
+      const EMAIL_TO = env.EMAIL_TO || '931097380@qq.com';
+      const fakeData = {
+        name: 'DIAG TEST',
+        phone: '12345678901',
+        email: 'diag@test.com',
+        topic: 'other',
+        message: 'This is a diagnostic email triggered from /api/diag-email at ' + new Date().toISOString()
+      };
+      const r = await sendEmail(fakeData, EMAIL_TO);
+      return json({ target: EMAIL_TO, result: r });
+    }
+
     if (url.pathname === '/api/contact' && request.method === 'POST') {
       const EMAIL_TO = env.EMAIL_TO || '931097380@qq.com';
       const SCT_KEY = env.SCT_KEY || 'SCT355983TqMHKMzqPtqL47lbTznAVzRrc';
