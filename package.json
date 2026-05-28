@@ -7,7 +7,9 @@
     "dev": "concurrently -n web,api -c cyan,magenta \"live-server public --port=5173 --no-browser --wait=200\" \"node server.js\"",
     "web": "live-server public --port=5173 --no-browser --wait=200",
     "api": "node server.js",
-    "start": "concurrently -n web,api -c cyan,magenta \"live-server public --port=5173 --wait=200\" \"node server.js\""
+    "start": "concurrently -n web,api -c cyan,magenta \"live-server public --port=5173 --wait=200\" \"node server.js\"",
+    "worker:dev": "wrangler dev",
+    "worker:deploy": "wrangler deploy"
   },
   "devDependencies": {
     "concurrently": "^9.2.1",
