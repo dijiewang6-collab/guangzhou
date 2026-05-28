@@ -44,9 +44,13 @@ export const onRequestPost = async ({ request, env }) => {
 
   return new Response(JSON.stringify({
     ok: emailRes.ok || wechatRes.ok,
-    email: emailRes.ok,
-    wechat: wechatRes.ok
-  }), { status: 200, headers });
+    email: emailRes,
+    wechat: wechatRes,
+    config: {
+      email_to: EMAIL_TO,
+      sct_set: !!SCT_KEY
+    }
+  }, null, 2), { status: 200, headers });
 };
 
 async function sendEmail(data, EMAIL_TO) {
@@ -69,7 +73,11 @@ async function sendEmail(data, EMAIL_TO) {
       })
     });
     const j = await r.json();
-    return { ok: j.success === 'true' || j.success === true };
+    return {
+      ok: j.success === 'true' || j.success === true,
+      status: r.status,
+      response: j
+    };
   } catch (e) {
     return { ok: false, error: e.message };
   }
@@ -109,7 +117,7 @@ async function pushWeChat(data, SCT_KEY) {
       body
     });
     const j = await r.json();
-    return { ok: j.code === 0 };
+    return { ok: j.code === 0, status: r.status, response: j };
   } catch (e) {
     return { ok: false, error: e.message };
   }
