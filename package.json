@@ -4,10 +4,13 @@
   "description": "广州 · 云山珠水 — 一座兼具岭南传统与现代活力的城市",
   "private": true,
   "scripts": {
-    "dev": "live-server --port=5173 --no-browser --wait=200",
-    "start": "live-server --port=5173 --wait=200"
+    "dev": "concurrently -n web,api -c cyan,magenta \"live-server --port=5173 --no-browser --wait=200\" \"node server.js\"",
+    "web": "live-server --port=5173 --no-browser --wait=200",
+    "api": "node server.js",
+    "start": "concurrently -n web,api -c cyan,magenta \"live-server --port=5173 --wait=200\" \"node server.js\""
   },
   "devDependencies": {
+    "concurrently": "^9.2.1",
     "live-server": "^1.2.2"
   }
 }

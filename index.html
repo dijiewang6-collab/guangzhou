@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>广州 · 千年商都，云山珠水</title>
-  <meta name="description" content="一座兼具岭南传统与现代活力的城市 —— 广州，云山珠水间的故事。" />
+  <title data-i18n="meta.title">Guangzhou · The Millennial Port City</title>
+  <meta name="description" data-i18n="meta.desc" content="A city where Lingnan tradition meets modern energy — Guangzhou, the story of Cloud Mountain and Pearl River." />
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Noto+Sans+SC:wght@300;400;500;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Noto+Sans+SC:wght@300;400;500;700&family=ZCOOL+XiaoWei&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -14,65 +14,146 @@
   <header class="nav">
     <div class="nav-inner">
       <a class="brand" href="#top">
-        <span class="brand-zh">广州</span>
-        <span class="brand-en">CANTON</span>
+        <span class="brand-zh" data-i18n="brand.zh">Guangzhou</span>
+        <span class="brand-en" data-i18n="brand.en">CANTON</span>
       </a>
       <nav class="nav-links">
-        <a href="#impression">城市印象</a>
-        <a href="#heritage">岭南底蕴</a>
-        <a href="#modern">现代脉动</a>
-        <a href="#flavor">食在广州</a>
-        <a href="#timeline">时间长河</a>
+        <a href="#impression" data-i18n="nav.impression">Impression</a>
+        <a href="#heritage" data-i18n="nav.heritage">Heritage</a>
+        <a href="#modern" data-i18n="nav.modern">Modern</a>
+        <a href="#flavor" data-i18n="nav.flavor">Flavor</a>
+        <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+        <a href="#timeline" data-i18n="nav.timeline">Timeline</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
-      <button class="nav-toggle" aria-label="菜单">☰</button>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button data-lang="en" class="lang-btn is-active">EN</button>
+        <button data-lang="zh" class="lang-btn">中</button>
+        <button data-lang="ru" class="lang-btn">РУ</button>
+      </div>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
     </div>
   </header>
 
+  <!-- 轮播 -->
+  <section id="top" class="carousel" aria-label="Guangzhou highlights">
+    <div class="carousel-track">
+      <div class="slide is-active" data-slide="0">
+        <div class="slide-bg" data-photo="canton-tower"></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-label" data-i18n="slide.tower.label">LANDMARK</span>
+          <h3 data-i18n="slide.tower.title">Canton Tower</h3>
+          <p data-i18n="slide.tower.desc">A 600-meter hyperboloid steel silhouette — the most graceful curve on the city's night skyline. When dusk falls, both banks of the Pearl River light up for it.</p>
+          <a href="#modern" class="slide-btn" data-i18n="slide.cta">Discover</a>
+        </div>
+      </div>
+
+      <div class="slide" data-slide="1">
+        <div class="slide-bg" data-photo="chenjia"></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-label" data-i18n="slide.chen.label">HERITAGE</span>
+          <h3 data-i18n="slide.chen.title">Chen Clan Ancestral Hall</h3>
+          <p data-i18n="slide.chen.desc">Wood, brick, plaster, ceramic, copper-iron — seven crafts gathered under one roof, the most complete living dictionary of Lingnan craftsmanship.</p>
+          <a href="#heritage" class="slide-btn" data-i18n="slide.cta">Discover</a>
+        </div>
+      </div>
+
+      <div class="slide" data-slide="2">
+        <div class="slide-bg" data-photo="pearl-river"></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-label" data-i18n="slide.river.label">SCROLL</span>
+          <h3 data-i18n="slide.river.title">Pearl River Nights</h3>
+          <p data-i18n="slide.river.desc">A river runs through, and a thousand lights answer back. From White Goose Pool to the twin towers, the Pearl River writes Guangzhou's longest poem.</p>
+          <a href="#gallery" class="slide-btn" data-i18n="slide.cta">Discover</a>
+        </div>
+      </div>
+
+      <div class="slide" data-slide="3">
+        <div class="slide-bg" data-photo="yumcha"></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-label" data-i18n="slide.yumcha.label">FLAVOR</span>
+          <h3 data-i18n="slide.yumcha.title">Yum Cha · Two Bites and a Pot</h3>
+          <p data-i18n="slide.yumcha.desc">Shrimp dumplings, siu mai, chicken feet, char siu bao — the Cantonese day begins slowly, in the warm steam of morning tea.</p>
+          <a href="#flavor" class="slide-btn" data-i18n="slide.cta">Discover</a>
+        </div>
+      </div>
+
+      <div class="slide" data-slide="4">
+        <div class="slide-bg" data-photo="yongqing"></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-label" data-i18n="slide.yongqing.label">ALLEY</span>
+          <h3 data-i18n="slide.yongqing.title">Yongqingfang · Old Streets, New Life</h3>
+          <p data-i18n="slide.yongqing.desc">Xiguan's old lanes never grew old. Beneath the arcade buildings, yesterday and tomorrow walk side by side — Guangzhou's gentlest answer to tradition.</p>
+          <a href="#heritage" class="slide-btn" data-i18n="slide.cta">Discover</a>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-arrow carousel-prev" aria-label="Previous">‹</button>
+    <button class="carousel-arrow carousel-next" aria-label="Next">›</button>
+
+    <div class="carousel-dots">
+      <button class="dot is-active" data-target="0" aria-label="Slide 1"></button>
+      <button class="dot" data-target="1" aria-label="Slide 2"></button>
+      <button class="dot" data-target="2" aria-label="Slide 3"></button>
+      <button class="dot" data-target="3" aria-label="Slide 4"></button>
+      <button class="dot" data-target="4" aria-label="Slide 5"></button>
+    </div>
+
+    <div class="carousel-progress"><span></span></div>
+  </section>
+
   <!-- 英雄区 -->
-  <section id="top" class="hero">
+  <section class="hero">
+    <div class="hero-bg"></div>
     <div class="hero-pattern"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">千 年 商 都 · 海 丝 起 点</p>
-      <h1 class="hero-title">
-        <span class="char">云</span><span class="char">山</span><span class="char">珠</span><span class="char">水</span>
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">MILLENNIAL PORT · BIRTHPLACE OF THE MARITIME SILK ROAD</p>
+      <h1 class="hero-title" data-i18n-html="hero.title">
+        <span class="char">C</span><span class="char">L</span><span class="char">O</span><span class="char">U</span><span class="char">D</span>
         <span class="hero-divider"></span>
-        <span class="char accent">花</span><span class="char accent">城</span><span class="char accent">广</span><span class="char accent">州</span>
+        <span class="char accent">R</span><span class="char accent">I</span><span class="char accent">V</span><span class="char accent">E</span><span class="char accent">R</span>
       </h1>
-      <p class="hero-sub">从骑楼老巷的茶香，到珠江两岸的霓虹 —— 一城两面，皆是岭南。</p>
+      <p class="hero-sub" data-i18n="hero.sub">From the tea steam of arcade alleys to the neon banks of the Pearl River — one city, two faces, both Lingnan.</p>
       <div class="hero-actions">
-        <a href="#impression" class="btn btn-primary">走进广州</a>
-        <a href="#timeline" class="btn btn-ghost">看看故事</a>
+        <a href="#impression" class="btn btn-primary" data-i18n="hero.cta1">Enter the City</a>
+        <a href="#timeline" class="btn btn-ghost" data-i18n="hero.cta2">Read the Story</a>
       </div>
     </div>
     <div class="hero-scroll">
-      <span></span>scroll
+      <span></span><span data-i18n="hero.scroll">scroll</span>
     </div>
   </section>
 
   <!-- 城市印象 -->
   <section id="impression" class="section impression">
     <div class="section-head">
-      <span class="section-tag">01 / 城市印象</span>
-      <h2>一城两面 · <em>古今同框</em></h2>
-      <p>2200 多年的城市记忆，与 600 米的现代地标，在同一帧画面里共生。</p>
+      <span class="section-tag" data-i18n="impression.tag">01 / IMPRESSION</span>
+      <h2 data-i18n-html="impression.title">A City of Two Faces · <em>Past and Present in One Frame</em></h2>
+      <p data-i18n="impression.lead">2,236 years of memory, beside a 600-meter modern landmark — coexisting in a single skyline.</p>
     </div>
 
     <div class="stats">
       <div class="stat">
         <div class="stat-num" data-target="2236">0</div>
-        <div class="stat-label">建城年份 公元前214年</div>
+        <div class="stat-label" data-i18n="impression.stat1">Founded · 214 BCE</div>
       </div>
       <div class="stat">
         <div class="stat-num" data-target="1881">0</div>
-        <div class="stat-label">辖区面积 平方公里 ×10</div>
+        <div class="stat-label" data-i18n="impression.stat2">Area · sq. km × 10</div>
       </div>
       <div class="stat">
         <div class="stat-num" data-target="600">0</div>
-        <div class="stat-label">广州塔小蛮腰 米</div>
+        <div class="stat-label" data-i18n="impression.stat3">Canton Tower · meters</div>
       </div>
       <div class="stat">
         <div class="stat-num" data-target="1860">0</div>
-        <div class="stat-label">常住人口 万人 ×0.1</div>
+        <div class="stat-label" data-i18n="impression.stat4">Population · ten thousand × 0.1</div>
       </div>
     </div>
   </section>
@@ -80,58 +161,46 @@
   <!-- 岭南底蕴 -->
   <section id="heritage" class="section heritage">
     <div class="section-head">
-      <span class="section-tag">02 / 岭南底蕴</span>
-      <h2>骑楼深巷 · <em>百年烟火</em></h2>
-      <p>红砖、青瓦、满洲窗，一砖一瓦写就岭南的诗。</p>
+      <span class="section-tag" data-i18n="heritage.tag">02 / HERITAGE</span>
+      <h2 data-i18n-html="heritage.title">Arcades and Alleyways · <em>A Century of Living Memory</em></h2>
+      <p data-i18n="heritage.lead">Red brick, green tile, Manchurian windows — every brick a verse of Lingnan.</p>
     </div>
 
     <div class="cards">
       <article class="card heritage-card">
-        <div class="card-img" style="background: linear-gradient(135deg, #6b2c1f, #c4634a);">
-          <span class="card-icon">⛩</span>
-        </div>
-        <h3>陈家祠</h3>
-        <p>岭南建筑艺术的明珠，木雕、砖雕、灰塑、陶塑，一处藏尽岭南匠艺。</p>
+        <div class="card-img card-img-photo" data-photo="chenjia"></div>
+        <h3 data-i18n="heritage.chen.t">Chen Clan Ancestral Hall</h3>
+        <p data-i18n="heritage.chen.d">The crown jewel of Lingnan architecture — wood, brick, plaster and ceramic carving in one place.</p>
       </article>
 
       <article class="card heritage-card">
-        <div class="card-img" style="background: linear-gradient(135deg, #8b6f3a, #d4a857);">
-          <span class="card-icon">🏛</span>
-        </div>
-        <h3>沙面</h3>
-        <p>欧陆建筑群与百年榕树共生，珠江白鹅潭边的世外岛屿。</p>
+        <div class="card-img card-img-photo" data-photo="shamian"></div>
+        <h3 data-i18n="heritage.shamian.t">Shamian Island</h3>
+        <p data-i18n="heritage.shamian.d">European architecture and century-old banyans coexist on this Pearl River island retreat.</p>
       </article>
 
       <article class="card heritage-card">
-        <div class="card-img" style="background: linear-gradient(135deg, #2c5f5d, #5fa8a3);">
-          <span class="card-icon">🌿</span>
-        </div>
-        <h3>永庆坊</h3>
-        <p>西关老巷的微改造典范，骑楼之下，新潮与旧梦并行。</p>
+        <div class="card-img card-img-photo" data-photo="yongqing"></div>
+        <h3 data-i18n="heritage.yongqing.t">Yongqingfang</h3>
+        <p data-i18n="heritage.yongqing.d">A model of micro-renewal in Xiguan's old lanes — beneath the arcades, the new and the nostalgic walk together.</p>
       </article>
 
       <article class="card heritage-card">
-        <div class="card-img" style="background: linear-gradient(135deg, #5a3a2c, #a87856);">
-          <span class="card-icon">📿</span>
-        </div>
-        <h3>南越王墓</h3>
-        <p>2000 多年前的西汉王陵，金缕玉衣下的岭南古王国。</p>
+        <div class="card-img card-img-photo" data-photo="nanyue"></div>
+        <h3 data-i18n="heritage.nanyue.t">Tomb of the Nanyue King</h3>
+        <p data-i18n="heritage.nanyue.d">A Western Han royal tomb, two millennia old — the ancient kingdom of Lingnan beneath a jade burial suit.</p>
       </article>
 
       <article class="card heritage-card">
-        <div class="card-img" style="background: linear-gradient(135deg, #4a2c1f, #8b5a3c);">
-          <span class="card-icon">🎭</span>
-        </div>
-        <h3>粤剧</h3>
-        <p>红船子弟，水袖翩跹，一声"问情"唱尽南国风韵。</p>
+        <div class="card-img card-img-photo" data-photo="yueju"></div>
+        <h3 data-i18n="heritage.yueju.t">Cantonese Opera</h3>
+        <p data-i18n="heritage.yueju.d">Red-boat troupes, fluttering sleeves — one note of "asking the heart" carries the soul of the south.</p>
       </article>
 
       <article class="card heritage-card">
-        <div class="card-img" style="background: linear-gradient(135deg, #3a4a2c, #7a8b56);">
-          <span class="card-icon">🌺</span>
-        </div>
-        <h3>花市</h3>
-        <p>"年三十行花街"——一座城用一束花迎接新年的传统。</p>
+        <div class="card-img card-img-photo" data-photo="huashi"></div>
+        <h3 data-i18n="heritage.huashi.t">Flower Markets</h3>
+        <p data-i18n="heritage.huashi.d">"Walk the flower street on New Year's Eve" — a city greets the new year with a bouquet, every year.</p>
       </article>
     </div>
   </section>
@@ -139,49 +208,49 @@
   <!-- 现代脉动 -->
   <section id="modern" class="section modern">
     <div class="section-head light">
-      <span class="section-tag">03 / 现代脉动</span>
-      <h2>霓虹珠江 · <em>湾区心脏</em></h2>
-      <p>金融、科创、会展、文旅 —— 在大湾区，广州始终是那块律动的心肌。</p>
+      <span class="section-tag" data-i18n="modern.tag">03 / MODERN PULSE</span>
+      <h2 data-i18n-html="modern.title">Neon on the Pearl · <em>Heart of the Greater Bay</em></h2>
+      <p data-i18n="modern.lead">Finance, innovation, conventions, culture — in the Greater Bay Area, Guangzhou is the beating muscle.</p>
     </div>
 
     <div class="modern-grid">
       <div class="modern-item modern-large">
-        <div class="modern-bg" data-bg="tower"></div>
+        <div class="modern-bg modern-photo" data-photo="canton-tower"></div>
         <div class="modern-text">
-          <h3>小蛮腰 · 广州塔</h3>
-          <p>600 米的双曲面钢结构，城市夜空中最妩媚的剪影。</p>
+          <h3 data-i18n="modern.tower.t">Canton Tower</h3>
+          <p data-i18n="modern.tower.d">A 600-meter hyperboloid steel structure — the most graceful silhouette in the night sky.</p>
         </div>
       </div>
 
       <div class="modern-item">
-        <div class="modern-bg" data-bg="cbd"></div>
+        <div class="modern-bg modern-photo" data-photo="cbd"></div>
         <div class="modern-text">
-          <h3>珠江新城 CBD</h3>
-          <p>东塔西塔双子并峙，华南金融的心脏地带。</p>
+          <h3 data-i18n="modern.cbd.t">Zhujiang New Town CBD</h3>
+          <p data-i18n="modern.cbd.d">East Tower and West Tower stand as twin pillars of South China finance.</p>
         </div>
       </div>
 
       <div class="modern-item">
-        <div class="modern-bg" data-bg="canton"></div>
+        <div class="modern-bg modern-photo" data-photo="canton-fair"></div>
         <div class="modern-text">
-          <h3>广交会</h3>
-          <p>始于 1957，世界看见中国制造的第一扇窗口。</p>
+          <h3 data-i18n="modern.fair.t">Canton Fair</h3>
+          <p data-i18n="modern.fair.d">Since 1957, the first window through which the world saw Made-in-China.</p>
         </div>
       </div>
 
       <div class="modern-item">
-        <div class="modern-bg" data-bg="science"></div>
+        <div class="modern-bg modern-photo" data-photo="nansha"></div>
         <div class="modern-text">
-          <h3>南沙科创</h3>
-          <p>大湾区几何中心，明日广州的另一张面孔。</p>
+          <h3 data-i18n="modern.nansha.t">Nansha Innovation</h3>
+          <p data-i18n="modern.nansha.d">The geographic heart of the Greater Bay Area — Guangzhou's other face for tomorrow.</p>
         </div>
       </div>
 
       <div class="modern-item modern-wide">
-        <div class="modern-bg" data-bg="metro"></div>
+        <div class="modern-bg modern-photo" data-photo="metro"></div>
         <div class="modern-text">
-          <h3>地铁与高铁</h3>
-          <p>16 条地铁线、3 座高铁站，一小时通达湾区每个角落。</p>
+          <h3 data-i18n="modern.metro.t">Metro and High-Speed Rail</h3>
+          <p data-i18n="modern.metro.d">16 metro lines and 3 high-speed rail stations connect every corner of the bay within an hour.</p>
         </div>
       </div>
     </div>
@@ -190,69 +259,214 @@
   <!-- 食在广州 -->
   <section id="flavor" class="section flavor">
     <div class="section-head">
-      <span class="section-tag">04 / 食在广州</span>
-      <h2>食 · <em>在广州</em></h2>
-      <p>"清而不淡，鲜而不俗，嫩而不生，油而不腻。"</p>
+      <span class="section-tag" data-i18n="flavor.tag">04 / FLAVOR</span>
+      <h2 data-i18n-html="flavor.title">Food · <em>in Guangzhou</em></h2>
+      <p data-i18n="flavor.lead">"Clear yet not bland, fresh yet not coarse, tender yet not raw, rich yet not heavy."</p>
     </div>
 
     <div class="flavor-list">
-      <div class="flavor-item"><span class="flavor-icon">🥟</span><div><h4>早茶</h4><p>虾饺烧麦凤爪叉烧包，一盅两件慢品老广晨光。</p></div></div>
-      <div class="flavor-item"><span class="flavor-icon">🍲</span><div><h4>老火靓汤</h4><p>三小时文火慢煨，是广府人对家的定义。</p></div></div>
-      <div class="flavor-item"><span class="flavor-icon">🍤</span><div><h4>白切鸡</h4><p>原味至简，皮爽肉滑，蘸姜葱蓉，吃的是本味。</p></div></div>
-      <div class="flavor-item"><span class="flavor-icon">🍜</span><div><h4>云吞面</h4><p>竹升面、鲜虾云吞、大地鱼汤底，西关味道。</p></div></div>
-      <div class="flavor-item"><span class="flavor-icon">🍮</span><div><h4>双皮奶</h4><p>顺德到广州，碗中两层皮，藏住老广的甜。</p></div></div>
-      <div class="flavor-item"><span class="flavor-icon">🍢</span><div><h4>肠粉</h4><p>布拉肠 vs 抽屉肠，每个老广心中都有一家"那家最好吃"。</p></div></div>
+      <div class="flavor-item">
+        <div class="flavor-thumb" data-photo="yumcha"></div>
+        <div class="flavor-body"><h4 data-i18n="flavor.yumcha.t">Yum Cha</h4><p data-i18n="flavor.yumcha.d">Shrimp dumplings, siu mai, chicken feet, char siu bao — two bites and a pot, slowly tasting the Cantonese morning.</p></div>
+      </div>
+      <div class="flavor-item">
+        <div class="flavor-thumb" data-photo="soup"></div>
+        <div class="flavor-body"><h4 data-i18n="flavor.soup.t">Slow-Cooked Soup</h4><p data-i18n="flavor.soup.d">Three hours of gentle simmering — the Cantonese definition of home.</p></div>
+      </div>
+      <div class="flavor-item">
+        <div class="flavor-thumb" data-photo="chicken"></div>
+        <div class="flavor-body"><h4 data-i18n="flavor.chicken.t">White Cut Chicken</h4><p data-i18n="flavor.chicken.d">Simplicity at its finest — crisp skin, tender flesh, dipped in ginger-scallion oil. A dish about the truth of taste.</p></div>
+      </div>
+      <div class="flavor-item">
+        <div class="flavor-thumb" data-photo="wonton"></div>
+        <div class="flavor-body"><h4 data-i18n="flavor.wonton.t">Wonton Noodles</h4><p data-i18n="flavor.wonton.d">Bamboo-pressed noodles, fresh shrimp wontons, dried-fish broth — the taste of Xiguan.</p></div>
+      </div>
+      <div class="flavor-item">
+        <div class="flavor-thumb" data-photo="milk"></div>
+        <div class="flavor-body"><h4 data-i18n="flavor.milk.t">Double-Skin Milk</h4><p data-i18n="flavor.milk.d">From Shunde to Guangzhou, two delicate layers in a bowl — the sweetness of old Canton.</p></div>
+      </div>
+      <div class="flavor-item">
+        <div class="flavor-thumb" data-photo="changfen"></div>
+        <div class="flavor-body"><h4 data-i18n="flavor.changfen.t">Rice Noodle Rolls</h4><p data-i18n="flavor.changfen.d">Cloth-rolled or drawer-steamed — every Cantonese keeps a "best one in town" in their heart.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 光影画廊 -->
+  <section id="gallery" class="section gallery-sec">
+    <div class="section-head">
+      <span class="section-tag" data-i18n="gallery.tag">05 / GALLERY</span>
+      <h2 data-i18n-html="gallery.title">Frame by Frame · <em>Guangzhou in Light</em></h2>
+      <p data-i18n="gallery.lead">Arcades, the Pearl River, neon, market alleys — this city, woven into every frame.</p>
+    </div>
+
+    <div class="gallery">
+      <figure class="g-item g-tall" data-photo="g1"><figcaption data-i18n="gallery.g1">Pearl River Nights</figcaption></figure>
+      <figure class="g-item" data-photo="g2"><figcaption data-i18n="gallery.g2">Arcade Streets</figcaption></figure>
+      <figure class="g-item" data-photo="g3"><figcaption data-i18n="gallery.g3">Canton Tower</figcaption></figure>
+      <figure class="g-item g-wide" data-photo="g4"><figcaption data-i18n="gallery.g4">Baiyun Mountain</figcaption></figure>
+      <figure class="g-item" data-photo="g5"><figcaption data-i18n="gallery.g5">Kapok in Bloom</figcaption></figure>
+      <figure class="g-item" data-photo="g6"><figcaption data-i18n="gallery.g6">Shamian Banyans</figcaption></figure>
+      <figure class="g-item g-wide" data-photo="g7"><figcaption data-i18n="gallery.g7">Zhujiang New Town</figcaption></figure>
+      <figure class="g-item" data-photo="g8"><figcaption data-i18n="gallery.g8">Xiguan Lanes</figcaption></figure>
     </div>
   </section>
 
   <!-- 时间长河 -->
   <section id="timeline" class="section timeline-sec">
     <div class="section-head">
-      <span class="section-tag">05 / 时间长河</span>
-      <h2>两千年 · <em>一城</em></h2>
+      <span class="section-tag" data-i18n="timeline.tag">06 / TIMELINE</span>
+      <h2 data-i18n-html="timeline.title">Two Millennia · <em>One City</em></h2>
     </div>
 
     <div class="timeline">
       <div class="timeline-line"></div>
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><span class="tl-year">前 214</span><h4>任嚣建番禺城</h4><p>秦定岭南，广州城的故事从这里开始。</p></div></div>
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><span class="tl-year">前 203</span><h4>南越国立国</h4><p>赵佗自立南越王，开岭南独立王国之始。</p></div></div>
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><span class="tl-year">唐 宋</span><h4>海上丝绸之路</h4><p>蕃坊云集，番禺港成为东方第一大港。</p></div></div>
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><span class="tl-year">明 清</span><h4>十三行通商</h4><p>"一口通商"百余年，广州曾是世界看中国的窗口。</p></div></div>
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><span class="tl-year">1957</span><h4>首届广交会</h4><p>新中国对外贸易的第一扇大门，从此春秋两季永不停。</p></div></div>
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><span class="tl-year">2010</span><h4>亚运广州</h4><p>小蛮腰点亮，广州走向世界级都市。</p></div></div>
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><span class="tl-year">今 日</span><h4>大湾区核心</h4><p>千年商都，正在书写新的湾区篇章。</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><span class="tl-year" data-i18n="tl.1.y">214 BCE</span><h4 data-i18n="tl.1.t">Ren Xiao Founds Panyu</h4><p data-i18n="tl.1.d">The Qin pacifies Lingnan — and the story of Guangzhou begins here.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><span class="tl-year" data-i18n="tl.2.y">203 BCE</span><h4 data-i18n="tl.2.t">Nanyue Kingdom Established</h4><p data-i18n="tl.2.d">Zhao Tuo declares himself King of Nanyue — the dawn of an independent southern realm.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><span class="tl-year" data-i18n="tl.3.y">Tang–Song</span><h4 data-i18n="tl.3.t">Maritime Silk Road</h4><p data-i18n="tl.3.d">Foreign quarters bustled — Panyu Port becomes the East's largest harbor.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><span class="tl-year" data-i18n="tl.4.y">Ming–Qing</span><h4 data-i18n="tl.4.t">The Thirteen Hongs</h4><p data-i18n="tl.4.d">For over a century of "single-port trade," Guangzhou was the world's window into China.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><span class="tl-year" data-i18n="tl.5.y">1957</span><h4 data-i18n="tl.5.t">First Canton Fair</h4><p data-i18n="tl.5.d">The first gateway of New China's foreign trade — held every spring and autumn ever since.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><span class="tl-year" data-i18n="tl.6.y">2010</span><h4 data-i18n="tl.6.t">Asian Games Guangzhou</h4><p data-i18n="tl.6.d">Canton Tower lights up — Guangzhou steps onto the global stage.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card"><span class="tl-year" data-i18n="tl.7.y">Today</span><h4 data-i18n="tl.7.t">Heart of the Greater Bay</h4><p data-i18n="tl.7.d">A millennial port city, writing a new chapter for the bay.</p></div></div>
     </div>
   </section>
+
+  <!-- 联系咨询 -->
+  <section id="contact" class="section contact-sec">
+    <div class="section-head">
+      <span class="section-tag" data-i18n="contact.tag">07 / CONTACT</span>
+      <h2 data-i18n-html="contact.title">Get in Touch · <em>Plan your Canton journey</em></h2>
+      <p data-i18n="contact.lead">Questions, custom tours, or just curious — leave a message and we'll get back within one business day.</p>
+    </div>
+
+    <div class="contact-grid">
+      <aside class="contact-info">
+        <ul class="contact-list">
+          <li>
+            <span class="contact-icon">📞</span>
+            <div>
+              <div class="contact-label" data-i18n="contact.phone">Phone</div>
+              <a href="tel:+862083336666" class="contact-value">+86 20 8333 6666</a>
+            </div>
+          </li>
+          <li>
+            <span class="contact-icon">✉</span>
+            <div>
+              <div class="contact-label" data-i18n="contact.email">Email</div>
+              <a href="mailto:hello@canton-guide.cn" class="contact-value">hello@canton-guide.cn</a>
+            </div>
+          </li>
+          <li>
+            <span class="contact-icon">💬</span>
+            <div>
+              <div class="contact-label" data-i18n="contact.wechat">WeChat</div>
+              <span class="contact-value">CantonGuide2026</span>
+            </div>
+          </li>
+          <li>
+            <span class="contact-icon">📍</span>
+            <div>
+              <div class="contact-label" data-i18n="contact.address">Address</div>
+              <span class="contact-value" data-i18n="contact.address.v">Zhujiang New Town, Tianhe District, Guangzhou</span>
+            </div>
+          </li>
+          <li>
+            <span class="contact-icon">⏰</span>
+            <div>
+              <div class="contact-label" data-i18n="contact.hours">Hours</div>
+              <span class="contact-value" data-i18n="contact.hours.v">Mon–Sun · 09:00 – 21:00 (GMT+8)</span>
+            </div>
+          </li>
+        </ul>
+      </aside>
+
+      <form class="contact-form" novalidate>
+        <div class="form-row">
+          <label>
+            <span data-i18n="contact.f.name">Name</span>
+            <input type="text" name="name" required data-i18n-placeholder="contact.f.name.ph" placeholder="Your name" />
+          </label>
+          <label>
+            <span data-i18n="contact.f.phone">Phone</span>
+            <input type="tel" name="phone" data-i18n-placeholder="contact.f.phone.ph" placeholder="+86 ..." />
+          </label>
+        </div>
+        <label>
+          <span data-i18n="contact.f.email">Email</span>
+          <input type="email" name="email" required data-i18n-placeholder="contact.f.email.ph" placeholder="you@example.com" />
+        </label>
+        <label>
+          <span data-i18n="contact.f.topic">Topic</span>
+          <select name="topic">
+            <option value="travel" data-i18n="contact.f.topic.travel">Travel & Tours</option>
+            <option value="business" data-i18n="contact.f.topic.business">Business & Trade</option>
+            <option value="culture" data-i18n="contact.f.topic.culture">Culture & Heritage</option>
+            <option value="other" data-i18n="contact.f.topic.other">Other</option>
+          </select>
+        </label>
+        <label>
+          <span data-i18n="contact.f.msg">Message</span>
+          <textarea name="message" rows="5" required data-i18n-placeholder="contact.f.msg.ph" placeholder="Tell us a bit about what you'd like to plan…"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary form-submit" data-i18n="contact.f.submit">Send Message</button>
+        <p class="form-hint" data-i18n="contact.f.hint">We usually reply within one business day.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- 左侧悬浮联系栏 -->
+  <aside class="floating-contact" aria-label="Quick contact">
+    <a href="tel:+862083336666" class="fc-item" data-tip="+86 20 8333 6666">
+      <span class="fc-icon">📞</span>
+      <span class="fc-label" data-i18n="contact.phone">Phone</span>
+    </a>
+    <a href="mailto:hello@canton-guide.cn" class="fc-item" data-tip="hello@canton-guide.cn">
+      <span class="fc-icon">✉</span>
+      <span class="fc-label" data-i18n="contact.email">Email</span>
+    </a>
+    <button type="button" class="fc-item fc-wechat" data-tip="CantonGuide2026">
+      <span class="fc-icon">💬</span>
+      <span class="fc-label" data-i18n="contact.wechat">WeChat</span>
+    </button>
+    <a href="#contact" class="fc-item fc-cta">
+      <span class="fc-icon">✎</span>
+      <span class="fc-label" data-i18n="contact.f.submit">Message</span>
+    </a>
+    <a href="#top" class="fc-item fc-top" aria-label="Back to top">
+      <span class="fc-icon">↑</span>
+      <span class="fc-label" data-i18n="contact.top">Top</span>
+    </a>
+  </aside>
 
   <!-- 页脚 -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="brand-zh-large">廣州</div>
-        <p>云山珠水，花城无处不飞花。</p>
+        <div class="brand-zh-large" data-i18n="footer.brand">CANTON</div>
+        <p data-i18n="footer.tagline">Cloud mountain, Pearl River — a city in bloom.</p>
       </div>
       <div class="footer-cols">
         <div>
-          <h5>关于这座城</h5>
-          <a href="#impression">城市印象</a>
-          <a href="#heritage">岭南底蕴</a>
-          <a href="#modern">现代脉动</a>
+          <h5 data-i18n="footer.col1">About the City</h5>
+          <a href="#impression" data-i18n="nav.impression">Impression</a>
+          <a href="#heritage" data-i18n="nav.heritage">Heritage</a>
+          <a href="#modern" data-i18n="nav.modern">Modern</a>
         </div>
         <div>
-          <h5>品味这座城</h5>
-          <a href="#flavor">食在广州</a>
-          <a href="#timeline">时间长河</a>
+          <h5 data-i18n="footer.col2">Taste the City</h5>
+          <a href="#flavor" data-i18n="nav.flavor">Flavor</a>
+          <a href="#timeline" data-i18n="nav.timeline">Timeline</a>
         </div>
         <div>
-          <h5>地理坐标</h5>
-          <p>北纬 23°09′</p>
-          <p>东经 113°23′</p>
+          <h5 data-i18n="footer.col3">Coordinates</h5>
+          <p>23°09′ N</p>
+          <p>113°23′ E</p>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 · 一份给广州的情书</span>
-      <span>Made with 🌺 in Canton</span>
+      <span data-i18n="footer.copy">© 2026 · A love letter to Guangzhou</span>
+      <span data-i18n="footer.made">Made with care in Canton</span>
     </div>
   </footer>
 
